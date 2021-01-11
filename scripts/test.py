@@ -24,7 +24,6 @@ def sprawdzKurs():
             j = json.loads(r.text)
             kursWaluty = j['rates']['PLN']
             print('Kurs Euro: ', kursWaluty)
-            print('--------------------------')
 
             f = open("./dane.csv", "a")
             f.write("{},{}ms,{}zl\n".format(dataWykonania, czasWykonania, kursWaluty))
